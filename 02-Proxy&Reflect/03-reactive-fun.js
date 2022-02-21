@@ -12,7 +12,7 @@ function reactive(target) {
   return new Proxy(target, handler);
 }
 
-let product = { price: 5, quantity: 2 };
+let product = reactive({ price: 5, quantity: 2 });
 
 let proxiedProduct = new Proxy(product, {});
 
